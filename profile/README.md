@@ -1,6 +1,6 @@
 <p><img src="https://splicedso.github.io/assets/mark-black.svg#gh-light-mode-only" height="40" alt="Spliced"><img src="https://splicedso.github.io/assets/mark-white.svg#gh-dark-mode-only" height="40" alt="Spliced"></p>
 
-**Spliced** is a small engineering lab working on inference for constrained hardware.
+**Spliced**: efficient inference.
 
 We start by measuring what a token costs, at the chip and at the board, with prefill and decode reported apart.
 
