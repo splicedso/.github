@@ -17,14 +17,14 @@ Later: electrical engineering, starting with an open power-measurement board.
 1. [Fewer bits is not fewer joules](https://github.com/splicedso/joule/blob/main/notes/2026-10-formats-and-batching.md). Eight quantization formats and batch sizes 1 to 8, energy at the chip and at the board. Chip-only measurement misranks F16 by 2x; batch 2 saves 1% per token and batch 8 saves 72%.
 2. [Where the joules go](https://github.com/splicedso/joule/blob/main/notes/2026-10-roofline-and-energy-model.md). A decode roofline from measured bandwidth (266 GB/s) and a leave-one-out-validated energy model. Its residuals isolate the cost of unpacking each format.
 3. [Does it hold?](https://github.com/splicedso/joule/blob/main/notes/2026-10-scale-and-runtime.md) The study at 7B, where every finding replicates and the hardware is used better, and in MLX, where repeat runs do not yet agree.
+4. [Two machines, one token](https://github.com/splicedso/joule/blob/main/notes/2026-10-two-machines.md) The study on a Windows laptop with an RTX 5070 Ti, on battery. Q4_0 wins on both; a 4-bit token costs the same whole-machine energy on both; one Mac finding does not transfer.
 
 ### Tools
 
-- [joule](https://github.com/splicedso/joule): energy per token for local inference, prefill and decode apart, chip and board, no sudo.
+- [joule](https://github.com/splicedso/joule): energy per token for local inference, prefill and decode apart, no admin rights. macOS (chip and board) and Windows with NVIDIA (GPU and battery).
 
 ### In progress
 
-- The same study on a Windows laptop, on battery.
 - Why MLX repeat runs disagree when llama.cpp's do not.
 - Per-kernel energy: timing and power-sampling each format's matrix-vector kernel alone.
 - Speculative decoding: does it save joules, or only seconds?
