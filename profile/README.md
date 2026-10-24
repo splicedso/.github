@@ -6,9 +6,11 @@
 
 | | |
 |---|---|
-| **Inference engineering** | Where decode time and energy go: memory bandwidth, kernels, quantization formats, batching, KV cache. |
+| **Inference engineering** | Where decode time and energy go: memory bandwidth, kernels, quantization formats, batching, KV cache, and how inference clusters are designed. |
 | **Data science** | Measurement you can trust: repeated runs, held-out validation, models whose coefficients have to make physical sense. |
-| **Electrical engineering** | The power path itself: chip versus board, sensing, and our own measurement hardware. |
+| **Software engineering** | Small, readable, open tools that make every measurement repeatable. |
+
+Later: electrical engineering, starting with an open power-measurement board.
 
 ### Published notes
 
@@ -24,7 +26,7 @@
 - The same study on a 7B model and on MLX, and on a Windows laptop.
 - Per-kernel energy: timing and power-sampling each format's matrix-vector kernel alone.
 - Speculative decoding: does it save joules, or only seconds?
-- An open power-measurement board (INA228 current sensing, about 1 kHz) to replace the 1 Hz board reading.
+- Cluster design: tokens per megawatt-hour across GPU generations, from public specs and a roofline, checked against MLPerf.
 
 We are a company, with the research in the open. If you build hardware or ship models to devices and want a model made to run well on yours, and measured honestly, open an issue on [joule](https://github.com/splicedso/joule/issues).
 
