@@ -17,6 +17,7 @@
 3. [Does it hold?](https://github.com/splicedso/joule/blob/main/notes/2026-10-scale-and-runtime.md) The study at 7B, where every finding replicates and the hardware is used better, and in MLX, where repeat runs do not yet agree.
 4. [Two machines, one token](https://github.com/splicedso/joule/blob/main/notes/2026-10-two-machines.md) The study on a Windows laptop with an RTX 5070 Ti, on battery. Q4_0 wins on both; a 4-bit token costs the same whole-machine energy on both; one Mac finding does not transfer.
 5. [The cost of unpacking](https://github.com/splicedso/joule/blob/main/notes/2026-10-kernel-energy.md) Each format's kernel measured alone. Q4_0 and Q4_K read identical bytes at identical speed; Q4_K's unpacking costs 40% more chip energy.
+6. [Small models pay more per weight](https://github.com/splicedso/joule/blob/main/notes/2026-10-model-width.md) Five formats across 0.5B to 7B. A weight in a 0.5B model costs up to 1.6 times one in a 7B; Q4_0 is cheapest at every width.
 
 ### Tools
 
@@ -25,7 +26,7 @@
 ### In progress
 
 - Why MLX repeat runs disagree when llama.cpp's do not.
-- Matrix shape: where fixed per-kernel costs take over from bytes.
+- Model shape: separating width from depth and vocabulary in the small-model penalty.
 - Speculative decoding: does it save joules, or only seconds?
 - Cluster design: tokens per megawatt-hour across GPU generations, from public specs and a roofline, checked against MLPerf.
 
