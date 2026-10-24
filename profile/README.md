@@ -18,6 +18,8 @@
 4. [Two machines, one token](https://github.com/splicedso/joule/blob/main/notes/2026-10-two-machines.md) The study on a Windows laptop with an RTX 5070 Ti, on battery. Q4_0 wins on both; a 4-bit token costs the same whole-machine energy on both; one Mac finding does not transfer.
 5. [The cost of unpacking](https://github.com/splicedso/joule/blob/main/notes/2026-10-kernel-energy.md) Each format's kernel measured alone. Q4_0 and Q4_K read identical bytes at identical speed; Q4_K's unpacking costs 40% more chip energy.
 6. [Small models pay more per weight](https://github.com/splicedso/joule/blob/main/notes/2026-10-model-width.md) Five formats across 0.5B to 7B. A weight in a 0.5B model costs up to 1.6 times one in a 7B; Q4_0 is cheapest at every width.
+7. [Faster is not cheaper](https://github.com/splicedso/joule/blob/main/notes/2026-10-speculative-decoding.md) Speculative decoding can be faster and cost more energy at once; copying from the context on an edit costs 32% of plain decoding.
+8. [Tokens per megawatt-hour](https://github.com/splicedso/joule/blob/main/notes/2026-10-tokens-per-megawatt-hour.md) Every MLPerf LLM result with measured wall power: a B200 server buys 2.7 times the tokens per joule of an H100 NVL one.
 
 ### Tools
 
@@ -27,8 +29,8 @@
 
 - Why MLX repeat runs disagree when llama.cpp's do not.
 - Model shape: separating width from depth and vocabulary in the small-model penalty.
-- Speculative decoding: does it save joules, or only seconds?
-- Cluster design: tokens per megawatt-hour across GPU generations, from public specs and a roofline, checked against MLPerf.
+- Adaptive drafting: speculation that backs off when acceptance falls.
+- Serving energy at batch, with a real serving engine under realistic load.
 
 We are a company, with the research in the open. If you build hardware or ship models to devices and want a model made to run well on yours, and measured honestly, open an issue on [joule](https://github.com/splicedso/joule/issues).
 
