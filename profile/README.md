@@ -22,6 +22,7 @@
 8. [Tokens per megawatt-hour](https://github.com/splicedso/phase/blob/main/notes/2026-10-tokens-per-megawatt-hour.md) Every MLPerf LLM result with measured wall power: a B200 server buys 2.7 times the tokens per joule of an H100 NVL one.
 9. [One flag fixes speculative decoding's energy problem](https://github.com/splicedso/phase/blob/main/notes/2026-10-speculative-threshold.md) A draft confidence threshold of about 0.5 removes the energy penalty on every task tested.
 10. [The same token, plugged in, and under batching](https://github.com/splicedso/phase/blob/main/notes/2026-10-windows-ac-and-batching.md) A discrete NVIDIA GPU plugged in: 34 to 46% faster for 23 to 33% more energy per token, and at its power ceiling from batch 1, so the second request saves 43% where on the Mac it saved 1%.
+11. [Same result, second tool](https://github.com/splicedso/phase/blob/main/notes/2026-10-speculative-second-tool.md) The speculative decoding findings hold through llama-server, the program real deployments use.
 
 All measurements in one table: [the Spliced dataset](https://splicedso.github.io/data/). New to this? Start with the [primers](https://splicedso.github.io/learn/).
 
