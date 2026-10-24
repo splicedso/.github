@@ -21,7 +21,7 @@
 7. [Faster is not cheaper](https://github.com/splicedso/joule/blob/main/notes/2026-10-speculative-decoding.md) Speculative decoding can be faster and cost more energy at once; copying from the context on an edit costs 32% of plain decoding.
 8. [Tokens per megawatt-hour](https://github.com/splicedso/joule/blob/main/notes/2026-10-tokens-per-megawatt-hour.md) Every MLPerf LLM result with measured wall power: a B200 server buys 2.7 times the tokens per joule of an H100 NVL one.
 9. [One flag fixes speculative decoding's energy problem](https://github.com/splicedso/joule/blob/main/notes/2026-10-speculative-threshold.md) A draft confidence threshold of about 0.5 removes the energy penalty on every task tested.
-10. [Batching without a step](https://github.com/splicedso/joule/blob/main/notes/2026-10-windows-rtx5070ti.md) A discrete NVIDIA GPU plugged in: at its power ceiling from batch 1, so the second request saves 43% where on the Mac it saved 1%.
+10. [The same token, plugged in, and under batching](https://github.com/splicedso/joule/blob/main/notes/2026-10-windows-ac-and-batching.md) A discrete NVIDIA GPU plugged in: 34 to 46% faster for 23 to 33% more energy per token, and at its power ceiling from batch 1, so the second request saves 43% where on the Mac it saved 1%.
 
 All measurements in one table: [the Spliced dataset](https://splicedso.github.io/data/).
 
