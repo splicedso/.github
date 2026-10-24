@@ -25,6 +25,7 @@
 11. [Same result, second tool](https://github.com/splicedso/phase/blob/main/notes/2026-10-speculative-second-tool.md) The speculative decoding findings hold through llama-server, the program real deployments use.
 12. [Small models pay more per weight, on a discrete GPU too](https://github.com/splicedso/phase/blob/main/notes/2026-10-windows-width.md) On an RTX 5070 Ti a weight in a 0.5B model costs up to 2.2 times one in a 7B.
 13. [What a long context costs](https://github.com/splicedso/phase/blob/main/notes/2026-10-windows-context.md) A token at 16k of context costs 1.3 times one at zero; an 8-bit KV cache costs more energy, not less, when the full cache already fits.
+14. [Batching survives a long context](https://github.com/splicedso/phase/blob/main/notes/2026-10-windows-batch-context.md) Batch 8 keeps 72 to 76% of its energy saving at 4096 tokens; the datacenter's loss needs memory to run out.
 
 All measurements in one table: [the Spliced dataset](https://splicedso.github.io/data/). New to this? Start with the [primers](https://splicedso.github.io/learn/).
 
