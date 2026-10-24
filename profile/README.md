@@ -23,6 +23,7 @@
 9. [One flag fixes speculative decoding's energy problem](https://github.com/splicedso/phase/blob/main/notes/2026-10-speculative-threshold.md) A draft confidence threshold of about 0.5 removes the energy penalty on every task tested.
 10. [The same token, plugged in, and under batching](https://github.com/splicedso/phase/blob/main/notes/2026-10-windows-ac-and-batching.md) A discrete NVIDIA GPU plugged in: 34 to 46% faster for 23 to 33% more energy per token, and at its power ceiling from batch 1, so the second request saves 43% where on the Mac it saved 1%.
 11. [Same result, second tool](https://github.com/splicedso/phase/blob/main/notes/2026-10-speculative-second-tool.md) The speculative decoding findings hold through llama-server, the program real deployments use.
+12. [Small models pay more per weight, on a discrete GPU too](https://github.com/splicedso/phase/blob/main/notes/2026-10-windows-width.md) On an RTX 5070 Ti a weight in a 0.5B model costs up to 2.2 times one in a 7B.
 
 All measurements in one table: [the Spliced dataset](https://splicedso.github.io/data/). New to this? Start with the [primers](https://splicedso.github.io/learn/).
 
