@@ -13,7 +13,7 @@
 ### Published notes
 
 1. [Fewer bits is not fewer joules](https://github.com/splicedso/phase/blob/main/notes/2026-10-formats-and-batching.md). Eight quantization formats and batch sizes 1 to 8, energy at the chip and at the board. Chip-only measurement misranks F16 by 2x; batch 2 saves 1% per token and batch 8 saves 72%.
-2. [Where the joules go](https://github.com/splicedso/phase/blob/main/notes/2026-10-roofline-and-energy-model.md). A decode roofline from measured bandwidth (266 GB/s) and a leave-one-out-validated energy model. Its residuals isolate the cost of unpacking each format.
+2. [Where the joules go](https://github.com/splicedso/phase/blob/main/notes/2026-10-roofline-and-energy-model.md). A decode roofline from measured bandwidth and a leave-one-out-validated energy model. Its residuals isolate the cost of unpacking each format.
 3. [Does it hold?](https://github.com/splicedso/phase/blob/main/notes/2026-10-scale-and-runtime.md) The study at 7B, where every finding replicates and the hardware is used better, and in MLX, where repeat runs do not yet agree.
 4. [Two machines, one token](https://github.com/splicedso/phase/blob/main/notes/2026-10-two-machines.md) The study on a Windows laptop with an RTX 5070 Ti, on battery. Q4_0 wins on both; a 4-bit token costs the same whole-machine energy on both; one Mac finding does not transfer.
 5. [The cost of unpacking](https://github.com/splicedso/phase/blob/main/notes/2026-10-kernel-energy.md) Each format's kernel measured alone. Q4_0 and Q4_K read identical bytes at identical speed; Q4_K's unpacking costs 40% more chip energy.
