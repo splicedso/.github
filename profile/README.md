@@ -34,4 +34,4 @@
 
 We are a company, with the research in the open. If you build hardware or ship models to devices and want a model made to run well on yours, and measured honestly, open an issue on [joule](https://github.com/splicedso/joule/issues).
 
-[splicedso.github.io](https://splicedso.github.io)
+[splicedso.github.io](https://splicedso.github.io) · [LinkedIn](https://www.linkedin.com/company/splicedso)
