@@ -28,6 +28,7 @@
 14. [Batching survives a long context](https://github.com/splicedso/phase/blob/main/notes/2026-10-windows-batch-context.md) Batch 8 keeps 72 to 76% of its energy saving at 4096 tokens; the datacenter's loss needs memory to run out.
 15. [Our first model](https://github.com/splicedso/phase/blob/main/notes/2026-10-spliced-drafter.md) A 0.5B draft model distilled from a 7B on one laptop: 6% lower loss, about 3% more accepted guesses.
 16. [When a long context caps the batch](https://github.com/splicedso/phase/blob/main/notes/2026-10-windows-memory-bound.md) Memory, not compute, is a long context's real cost: it forbids the batch that makes tokens cheap, and an 8-bit cache does not buy it back.
+17. [A prediction that failed](https://github.com/splicedso/phase/blob/main/notes/2026-10-windows-longctx.md) At 65536 tokens an 8-bit cache fits an extra sequence and still costs 1.58 times as much per token.
 
 All measurements in one table: [the Spliced dataset](https://splicedso.github.io/data/). New to this? Start with the [primers](https://splicedso.github.io/learn/).
 
