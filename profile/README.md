@@ -31,6 +31,7 @@
 17. [A prediction that failed](https://github.com/splicedso/phase/blob/main/notes/2026-10-windows-longctx.md) At 65536 tokens an 8-bit cache fits an extra sequence and still costs 1.58 times as much per token.
 18. [Reading the prompt](https://github.com/splicedso/phase/blob/main/notes/2026-10-windows-prefill.md) A prompt token is about 40 times cheaper than a generated one, but at 8000 tokens of prompt, prefill is 40% of the request.
 19. [Per correct answer, serving matters as much as size](https://github.com/splicedso/phase/blob/main/notes/2026-10-joules-per-correct-answer.md) A 7B batched at 8 costs less per correct answer than a 1.5B alone, on a Mac and an AMD Strix Halo.
+20. [Calibration doubles 2-bit accuracy](https://github.com/splicedso/phase/blob/main/notes/2026-10-lattice-v0-calibration.md) Lattice v0: 21% to 42% on GSM8K at the same size; 4-bit is still cheaper per answer.
 
 All measurements in one table: [the Spliced dataset](https://splicedso.github.io/data/). New to this? Start with the [primers](https://splicedso.github.io/learn/).
 
